@@ -1,0 +1,34 @@
+<div id="container">
+  <header>Listing attendence_entries</header>
+
+  <table>
+    <tr>
+      <th>Student</th>
+      <th>Year</th>
+      <th>Month</th>
+      <th>Day</th>
+      <th>Present</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+
+    <% @attendence_entries.each do |attendence_entry| %>
+    <tr>
+      <td><%= attendence_entry.student %></td>
+      <td><%= attendence_entry.year %></td>
+      <td><%= attendence_entry.month %></td>
+      <td><%= attendence_entry.day %></td>
+      <td><%= attendence_entry.present %></td>
+      <td><%= link_to 'Show', attendence_entry %></td>
+      <td><%= link_to 'Edit', edit_attendence_entry_path(attendence_entry) %></td>
+      <td><%= link_to 'Destroy', attendence_entry, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+    <% end %>
+  </table>
+
+  <br />
+
+  <%= link_to 'New Attendence entry', new_attendence_entry_path %>
+  <a href="http://0.0.0.0:3000">Home</a>
+</div>

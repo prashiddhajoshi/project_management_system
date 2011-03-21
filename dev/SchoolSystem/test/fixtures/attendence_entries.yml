@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  student: MyString
+  year: 1
+  month: 1
+  day: 1
+  present: 1
+
+two:
+  student: MyString
+  year: 1
+  month: 1
+  day: 1
+  present: 1

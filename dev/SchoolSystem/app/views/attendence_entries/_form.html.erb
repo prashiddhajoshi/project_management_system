@@ -1,0 +1,37 @@
+<%= form_for(@attendence_entry) do |f| %>
+  <% if @attendence_entry.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@attendence_entry.errors.count, "error") %> Listed Below:</h2>
+
+      <ul>
+      <% @attendence_entry.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :student %><br />
+    <%= f.text_field :student %>
+  </div>
+  <div class="field">
+    <%= f.label :year %><br />
+    <%= f.text_field :year %>
+  </div>
+  <div class="field">
+    <%= f.label :month %><br />
+    <%= f.text_field :month %>
+  </div>
+  <div class="field">
+    <%= f.label :day %><br />
+    <%= f.text_field :day %>
+  </div>
+  <div class="field">
+    <%= f.label :present %><br />
+    <%= f.text_field :present %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

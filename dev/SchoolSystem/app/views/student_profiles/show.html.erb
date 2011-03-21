@@ -1,0 +1,29 @@
+<div id= "show">
+  <div id= "show_body">
+    <p id="notice"><%= notice %></p>
+
+    <p class="show_details">
+      <b>Name:</b>
+      <%= @student_profile.name %>
+    </p>
+
+    <p class="show_details">
+      <b>Roll number:</b>
+      <%= @student_profile.roll_number %>
+    </p>
+
+    <p class="show_details">
+      <b>Address:</b>
+      <%= @student_profile.address %>
+    </p>
+
+    <p class="show_details">
+      <b>Phone number:</b>
+      <%= @student_profile.phone_number %>
+    </p>
+  </div>
+
+
+  <%= link_to 'Edit', edit_student_profile_path(@student_profile) %> |
+  <%= link_to 'Back', student_profiles_path %>
+</div>

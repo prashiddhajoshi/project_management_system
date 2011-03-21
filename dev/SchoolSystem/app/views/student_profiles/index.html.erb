@@ -1,0 +1,32 @@
+<div id="container">
+  <header>Listing student profile</header>
+
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Roll number</th>
+      <th>Address</th>
+      <th>Phone number</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+
+    <% @student_profiles.each do |student_profile| %>
+    <tr>
+      <td><%= student_profile.name %></td>
+      <td><%= student_profile.roll_number %></td>
+      <td><%= student_profile.address %></td>
+      <td><%= student_profile.phone_number %></td>
+      <td><%= link_to 'Show', student_profile %></td>
+      <td><%= link_to 'Edit', edit_student_profile_path(student_profile) %></td>
+      <td><%= link_to 'Destroy', student_profile, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+    <% end %>
+  </table>
+
+  <br />
+
+  <%= link_to 'New Student profile', new_student_profile_path %> |
+	<a href="http://0.0.0.0:3000">Home</a>
+</div>
